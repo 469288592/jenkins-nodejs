@@ -16,6 +16,7 @@ RUN localedef -v -c -i en_US -f UTF-8 zh_CN.UTF-8 >/dev/null 2>&1 &&\
     yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel &&\
     yum -y install https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodejs-10.15.3-1nodesource.x86_64.rpm &&\
     npm install -g cnpm --registry=https://registry.npm.taobao.org &&\
+    rpmdev-setuptree &&\
     dos2unix /tmp/resource/*sh && \
     cp -r /tmp/resource/agent.jar /usr/bin/agent.jar && \
     cp -r /tmp/resource/jenkins.sh /usr/local/bin/jenkins.sh && \
